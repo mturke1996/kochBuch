@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="muhammad.png" alt="Recipe Finder Logo">
+            <h1>Mohammed's Kitchen</h1>
+            <div>
+                <button id="cartBtn"><i class="fa-solid fa-cart-shopping fa-beat-fade"></i></button>
+                <button id="listBtn"><i class="fa-solid fa-list-check fa-beat-fade"></i></button>            
+            </div>
+            <p>Today's Date: <span id="currentDate"></span></p>
+        </header>
+    
+        <div class="search-container">
+            <input type="text" id="recipeInput" placeholder="Enter an ingredient">
+            <button id="searchRecipeBtn">Search</button>
+        </div>
+        <hr>
+        <br>
+        <div class="recipe-grid" id="randomRecipeGrid">
+            <!-- Placeholder recipes will be displayed here -->
+        </div>
+    
+        <div class="recipe-details" id="recipeDetails">
+            <!-- Recipe details will be displayed here -->
+        </div>
+    </div>
+    
+    <!-- زر لإظهار تفاصيل الوصفة -->
+    <div id="recipeBox" class="hidden">
+        <button id="closeRecipeBtn" onclick="closeRecipeBox1()">&times;</button>
+        <h2 id="recipeTitle"></h2>
+        <img id="recipeImage" src="" alt="" width="600px">
+        <p id="recipeInstructions"></p>
+        <ol id="zutaten"></ol>
+        <a id="youtube" href="" target="_blank"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+    </div>
+    
+    <div id="recipeBox1" class="hidden1">
+        <button id="closeRecipeBtn" onclick="closeRecipeBox2()">&times;</button>
+        <h1 style="text-align: center">Cart Items</h1>
+        <hr/>
+        <ol id="cartItems"></ol>
+        <div class="bestellenBtn">
+            <button class="btn" onclick="">bestellen</button>
+        </div>
+    </div>
+    <div id="recipeBox2" class="hidden2">
+        <button id="closeRecipeBtn" onclick="closeRecipeBox3()">&times;</button>
+        <h1 style="text-align: center">List Items</h1>
+        <hr/>
+        <div id="ListItems"></div>
+        <div class="btn">
+            <button class="btn" onclick="">bestellen</button>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mohammed's Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
